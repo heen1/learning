@@ -1,0 +1,173 @@
+:root{ --branco-principal: #FFFFFF;
+        --cinza-secundario: #C0C0C0;
+            --botao-azul: #0051ff;
+                --cor-de-fundo: #00030C;
+                    --fonte-principal: 'Inter';
+                        --botao-azul-efeito: #3c92fa;
+ }      
+ 
+
+ body { background-color: var(--cor-de-fundo);
+        color: var(--branco-principal);
+        font-family: var(--fonte-principal);
+        font-size: 16px;
+        font-weight: 400;
+
+ }
+
+ *{ 
+    margin: 0;
+    padding: 0;
+ }
+
+    .principal  {
+        background-image: url(Background.png);
+        background-repeat: no-repeat;
+        background-size: contain; 
+        align-items: center;
+        text-align: center;
+    }
+    .container  { height: 100vh;
+                display: grid;
+                grid-template-columns: 50% 50%;} /* grid template columns transforma a linha em colunas " o 50% 50% faz com que a tela se divida em duas partes de 50%, metade/metade, pode usar 50, 25,25 etc... */
+                
+
+    .container__botao { background-color: var(--botao-azul);
+        border-radius: 5px;
+        padding: 1em;
+        color: var(--branco-principal);
+        display: block;
+        text-decoration: none;
+        margin-bottom: 1em; }
+
+    .container__aviso {
+        font-size: 12px;
+        color: var(--cinza-secundario);
+    }
+    .container__titulo {
+        font-size: 28px;
+        font-weight: 700;
+    }
+    .container__imagem {
+        margin: 1em 0 2em 0; /* O valor de 1em corresponde às 12 horas no topo do relógio e faz a margem no topo. Depois, vem o valor de 0 que é do lado direito. Em seguida, vem o 2em, que é a parte de baixo, e por último, tem o lado esquerdo, que também é 0. Como não queríamos espaçamento na esquerda e na direita, colocamos o valor 0. */
+    }
+    .container__caixa{
+        margin: 0 6em; /* seletor ".container__caixa" serve para dar margem a página: podemos construir com dois valores: o 0 representa o topo e a base; enquanto o 6em representa as laterais esquerda e direita. */
+
+    }
+    .secundario__imagem {
+        width: 80%;    
+        margin: 0 3em;
+        
+    }
+    .secundario {
+        align-items: center;
+        margin: 0 10em;   
+    }
+    .imagem__secundaria {
+        width: 80%;
+        align-items: center;
+        margin: 0 3em;
+    }
+    .descricao__titulo {
+        font-weight: 700;
+        font-size: 40px;
+        color: var(--branco-principal);
+        margin-bottom: 0.1em;
+        align-items: center;
+        margin: 0 0em; 
+    }
+    .descricao__texto {
+        color: var(--cinza-secundario);
+    }
+    .secundario__botao {
+        margin-top: 1em; /* margem entre botão e texto */
+        display: inline-block; /* o botão passa a ocupar apenas o espaço dele. O display inline-block tenta pegar as melhores partes do inline e do block, que é como o nome diz. */
+    } /* Ou seja, o inline transforma o elemento em linha, então se colocássemos outro elemento no código, ele ficaria ao lado do botão "Assine o Combo+", mas como não tem, ele ocupa só o espaço dele, sem pegar a linha inteira como antes. Agora, ele está apenas no canto esquerdo. */
+    /* Já o block faz uma quebra de linha do texto de cima. Além disso, ele nos permitiria usar as propriedades width e height, ou seja, permite mudar o tamanho desse botão. No entanto, só queríamos usar essa quebra de linha.*/
+    
+    .container__descricao {
+        padding: 2em; /*padding dentro da descrição, para abrir um espaço dentro do bloco de descrição e acabar afastando a imagem. Isso também vai afetar a segunda <section> */
+    }
+    .terciario__imagem{
+        text-align: center;
+        align-items: center;
+        display: block;
+        margin: 0 10em;
+        width: 75%;
+    }
+    .dispositivos__lista {
+
+        display: flex; /* display flex muda a direção da lista "ul" , em vez de ficar na vertical ela fica na horizontal */
+        justify-content: center; /* centralizou tudo que tínhamos colocado no flex, que são todos os itens da lista */
+        list-style-type: none; /* remover bolinha no inicio de cada li (lista) */
+        margin: 15em 0;
+    }
+    .dispositivos {
+        text-align: center; /* o text-align pega todos os itens inline de dentro do container interno e os centraliza. O container, nesse caso, seria a section dos dispositivos e os elementos inline, os textos. */
+    }
+    .dispositivos__titulo {
+        font-size: 22px;
+        margin: -5em 0;
+    }
+    .lista__item {
+        font-size: 22px;
+        color: var(--branco-principal);
+    }
+    .dispositivos__titulo {
+        font-size: 48px;
+        color: var(--branco-principal);
+    }
+    
+    .lista__item {
+        font-size: 32px;
+        color: var(--branco-principal);
+    }
+    .rodape__logo {
+        text-align: center;
+        align-items: center;
+        margin: 0 55em;
+        width: 100px;
+        display: block; 
+        
+    }
+    .rodape {
+        text-align: center;
+        list-style-type: none;
+        justify-content: center;
+        align-items: center;
+        width: 1200px;
+        height: 100px;
+        color: var(--cinza-secundario);
+    }    
+    .rodape__lista{
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        color: var(--cinza-secundario);
+        justify-content: space-between;
+        height: 100px;
+        width: 1200px;
+        margin: 0 20em;
+        font-size: 14px;
+    }
+    .rodape__texto{
+        text-align: center;
+        margin: 0 15em;
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--cinza-secundario);
+    }
+    a {
+        color: var(--cinza-secundario)
+    }
+    .lista__link a:active{
+        color: purple;
+    }
+    .container__botao:hover {
+        background-color: var(--botao-azul-efeito);
+        color: var(--cor-de-fundo);
+    }
+    
+    
+    
